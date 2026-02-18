@@ -17,7 +17,7 @@ KEYWORDS=""
 
 RDEPEND="
 	>=sys-power/hhd-4.1
-	>=sys-apps:inputplumber-0.74
+	>=sys-apps/inputplumber-0.74
 	sys-apps/dbus
 	|| ( sys-apps/systemd sys-auth/elogind )
 "
