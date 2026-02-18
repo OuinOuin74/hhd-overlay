@@ -91,7 +91,7 @@ src_install() {
 
 	domenu ./pkg/hhd-ui.desktop
 	exeinto /usr/bin
-	doexe ./pkg/hhd-ui.sh
+	newexe ./pkg/hhd-ui.sh hhd-ui
 }
 
 pkg_postinst() {
