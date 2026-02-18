@@ -52,6 +52,7 @@ src_prepare() {
 		./electron/node_modules/electron/package.json || die
 	sed -i "s|\"version\": \"1.0.0\"|\"version\": \"${PV}\"|" \
 		./electron/package.json || die
+	sed -i "s|Gaming;||" "./pkg/hhd-ui.desktop" || die
 }
 
 src_compile() {
