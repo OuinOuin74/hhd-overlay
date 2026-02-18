@@ -357,6 +357,8 @@ CRATES="
 
 inherit cargo systemd udev
 
+RUST_MIN_VER="1.86.0"
+
 DESCRIPTION="Input device management daemon for handheld gaming devices"
 HOMEPAGE="https://github.com/ShadowBlip/InputPlumber"
 
@@ -445,6 +447,10 @@ src_install() {
 
 pkg_postinst() {
 	udev_reload
-	elog "Pour activer InputPlumber au démarrage :"
+	elog "Install completed. Enable service with:"
 	elog "  systemctl enable --now inputplumber"
+}
+
+pkg_postrm() {
+	udev_reload
 }
